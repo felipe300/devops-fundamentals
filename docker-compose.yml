@@ -1,12 +1,13 @@
+---
 services:
-  zola: 
+  zola:
     build:
       context: .
       dockerfile: ./Dockerfile.dev
-    ports: 
+    ports:
       - 1111:1111
-    develop: 
-      watch: 
+    develop:
+      watch:
         - action: sync
-          path: ./  
+          path: ./
           target: /project

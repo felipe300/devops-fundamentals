@@ -1,7 +1,7 @@
 +++
 title = "Introducción"
 date = 2025-07-08
-description = "Pruebas automatizadas"
+description = "Pruebas automatizadas con nuevas pruebas"
 template = "docs/page.html"
 weight = 90
 sort_by = "weight"
@@ -23,6 +23,7 @@ Implementar técnicas de automatización de pruebas al ciclo de integración con
 3. Implementar pruebas unitarias de servicios web al ciclo de integración continua utilizando SoapUI.
 4. Implementar pruebas de rendimiento en el ciclo de integración continua utilizando JMeter.
 5. Implementar pruebas funcionales en el ciclo de integración continua utilizando Selenium.
+
 
 
 ## Criterios de Evaluación

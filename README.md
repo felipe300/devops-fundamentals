@@ -4,7 +4,7 @@ This application will use Docker multi-stage: `FROM` twice in the same `Dockerfi
 
 Application to generate documentation with RUST, it also has a list of docker projects.
 
-```bash
+```sh
 git clone --recursive <REPO_TO_CLONE>
 
 docker build -t zola demo .
@@ -13,7 +13,7 @@ docker compose up
 docker images
 
 docker run -d -p 80:80 zola-demo:latest
-docker logs -f <DOCKER_NAMES>
+docker logs -f <DOCKER_NAMES> # Only if you work in detach mode
 docker stop <DOCKER_NAMES>
 
 # CHECK the EXPORT PORT in dockerfile.dev 1111

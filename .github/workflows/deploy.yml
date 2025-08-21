@@ -3,14 +3,16 @@ name: Build & Deploy Zola with Docker
 on:
   push:
     branches:
-      - main   # o la rama donde tengas tu código fuente
+      - main
+
+permissions:
+  contents: write
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (with submodules)
         uses: actions/checkout@v4
         with:
           submodules: recursive
@@ -20,9 +22,29 @@ jobs:
 
       - name: Extract public folder
         run: |
+          mkdir -p ./public
           container_id=$(docker create zola-site)
           docker cp $container_id:/public ./public
           docker rm $container_id
+
+      - name: Upload public folder as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-folder
+          path: ./public
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download public folder artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: public-folder
+          path: ./public
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

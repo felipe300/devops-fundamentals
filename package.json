@@ -1,0 +1,24 @@
+{
+  "name": "devops-fundamentals",
+  "version": "1.0.0",
+  "description": "This application will use Docker multi-stage: `FROM` twice in the same `Dockerfile`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipe300/devops-fundamentals.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipe300/devops-fundamentals/issues"
+  },
+  "homepage": "https://github.com/felipe300/devops-fundamentals#readme",
+  "devDependencies": {
+    "cypress": "^15.0.0"
+  }
+}

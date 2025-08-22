@@ -25,3 +25,15 @@ docker logs -f <DOCKER_NAMES>
 # To make changes use --watch flag
 docker compose --watch
 ```
+
+### Testing with Cypress
+
+Check the official Cypress page.
+
+```sh
+# Install cypress
+npm install -D cypress
+
+# open cypress
+npx cypress open
+```

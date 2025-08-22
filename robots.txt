@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://felipe300.github.io/devops-fundamentals//sitemap.xml
+Sitemap: https://sbstn-jmnz.github.io/devops-fundamentals//sitemap.xml

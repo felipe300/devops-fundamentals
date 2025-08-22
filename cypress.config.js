@@ -6,8 +6,7 @@ module.exports = {
       // implement node event listeners here
     },
     env: {
-      prodURL: "https://felipe300.github.io/devops-fundamentals/",
-      devURL: "http://localhost:1111/",
+      baseUrl: "http://localhost:1111",
     },
   },
 };

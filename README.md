@@ -31,6 +31,9 @@ docker compose --watch
 Check the official Cypress page.
 
 ```sh
+# create an npm file
+npm init -y
+
 # Install cypress
 npm install -D cypress
 

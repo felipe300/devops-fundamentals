@@ -41,10 +41,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Download Artifact
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: public
+          name: public-folder
           path: ./public
 
       - name: Install Dependencies

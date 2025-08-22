@@ -34,7 +34,7 @@ jobs:
           name: public-folder
           path: ./public
 
-  cypress:
+  test:
     runs-on: ubuntu-latest
     needs: build
     strategy:
@@ -73,7 +73,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: cypress
+    needs: test
     if: success()
     steps:
       - name: Checkout repository
